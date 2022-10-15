@@ -23,7 +23,7 @@ const vowelCounter = (string) => {
     let lCount = input.filter((x) => {
       return x == l.toLowerCase();
     });
-    if (input.includes(l.toLowerCase())) {
+    if (lCount) {
       vowels[l] = lCount.length;
     }
   });
