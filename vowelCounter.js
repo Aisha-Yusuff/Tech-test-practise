@@ -8,7 +8,19 @@
 // U – 0
 
 const vowelCounter = (string) => {
-  return "A - 0\nE - 0\nI - 0\nO - 0\nU - 0";
+  const vowels = {
+    A: 0,
+    E: 0,
+    I: 0,
+    O: 0,
+    U: 0,
+  };
+
+  if (string.match("a")) {
+    vowels.A++;
+  }
+
+  return `A - ${vowels.A}\nE - 0\nI - 0\nO - 0\nU - 0`;
 };
 
 module.exports = vowelCounter;
