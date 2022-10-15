@@ -20,11 +20,11 @@ const vowelCounter = (string) => {
   const letters = Object.keys(vowels);
 
   letters.forEach((l) => {
-    let lCount = input.filter((x) => {
+    let letterCount = input.filter((x) => {
       return x == l.toLowerCase();
     });
-    if (lCount) {
-      vowels[l] = lCount.length;
+    if (letterCount) {
+      vowels[l] = letterCount.length;
     }
   });
 
