@@ -12,4 +12,10 @@ describe("vowelCounter", () => {
   it("returns the vowel count for a word", () => {
     expect(vowelCounter("hello")).toEqual("A - 0\nE - 1\nI - 0\nO - 1\nU - 0");
   });
+
+  it("returns the vowel count for a sentence", () => {
+    expect(vowelCounter("I am a Java engineer")).toEqual(
+      "A - 4\nE - 3\nI - 2\nO - 0\nU - 0"
+    );
+  });
 });

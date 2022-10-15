@@ -8,6 +8,7 @@
 // U – 0
 
 const vowelCounter = (string) => {
+  const input = string.toLowerCase().split("");
   const vowels = {
     A: 0,
     E: 0,
@@ -19,8 +20,11 @@ const vowelCounter = (string) => {
   const letters = Object.keys(vowels);
 
   letters.forEach((l) => {
-    if (string.match(l.toLowerCase())) {
-      vowels[l]++;
+    let lCount = input.filter((x) => {
+      return x == l.toLowerCase();
+    });
+    if (input.includes(l.toLowerCase())) {
+      vowels[l] = lCount.length;
     }
   });
 
