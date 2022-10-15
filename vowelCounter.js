@@ -19,8 +19,14 @@ const vowelCounter = (string) => {
   if (string.match("a")) {
     vowels.A++;
   }
+  if (string.match("e")) {
+    vowels.E++;
+  }
+  if (string.match("o")) {
+    vowels.O++;
+  }
 
-  return `A - ${vowels.A}\nE - 0\nI - 0\nO - 0\nU - 0`;
+  return `A - ${vowels.A}\nE - ${vowels.E}\nI - 0\nO - ${vowels.O}\nU - 0`;
 };
 
 module.exports = vowelCounter;
