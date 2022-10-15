@@ -16,17 +16,15 @@ const vowelCounter = (string) => {
     U: 0,
   };
 
-  if (string.match("a")) {
-    vowels.A++;
-  }
-  if (string.match("e")) {
-    vowels.E++;
-  }
-  if (string.match("o")) {
-    vowels.O++;
-  }
+  const letters = Object.keys(vowels);
 
-  return `A - ${vowels.A}\nE - ${vowels.E}\nI - 0\nO - ${vowels.O}\nU - 0`;
+  letters.forEach((l) => {
+    if (string.match(l.toLowerCase())) {
+      vowels[l]++;
+    }
+  });
+
+  return `A - ${vowels.A}\nE - ${vowels.E}\nI - ${vowels.I}\nO - ${vowels.O}\nU - ${vowels.U}`;
 };
 
 module.exports = vowelCounter;
